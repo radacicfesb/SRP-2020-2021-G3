@@ -6,7 +6,14 @@ class MedicalTestService {
 
   async getAllTests() {
     try {
+<<<<<<< HEAD
       const tests = await this.testModel.findAll();
+=======
+      const tests = await this.testModel.findAll({
+        // * to include only some attributes use:
+        // * attributes: ["id", "name", "result", ...]
+      });
+>>>>>>> d2a46b4... Add initial routes for medicalTest api
       return tests;
     } catch (err) {
       this.logger.error("Error %o", err);
@@ -23,6 +30,7 @@ class MedicalTestService {
       throw err;
     }
   }
+<<<<<<< HEAD
 
   async getTestsByQuery(queryDTO) {
     try {
@@ -52,6 +60,8 @@ class MedicalTestService {
       throw err;
     }
   }
+=======
+>>>>>>> d2a46b4... Add initial routes for medicalTest api
 }
 
 module.exports = MedicalTestService;

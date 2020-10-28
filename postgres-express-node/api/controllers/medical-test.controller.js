@@ -1,5 +1,8 @@
 const winston = require("winston");
+<<<<<<< HEAD
 const { Op } = require("sequelize");
+=======
+>>>>>>> d2a46b4... Add initial routes for medicalTest api
 const { medicalTestServiceInstance } = require("../../services");
 
 const Logger = winston.loggers.get("logger");
@@ -14,11 +17,19 @@ exports.getTests = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 exports.getTestsByUser = async (req, res) => {
   const { id } = req.params;
   try {
     const tests = await medicalTestServiceInstance.getAllTestsByUser({
       UserId: id,
+=======
+exports.getTests = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const tests = await medicalTestServiceInstance.getAllTestsByUser({
+      UserID: id,
+>>>>>>> d2a46b4... Add initial routes for medicalTest api
     });
     res.json({ tests });
   } catch (err) {
@@ -26,6 +37,7 @@ exports.getTestsByUser = async (req, res) => {
     return res.status(400).json({ error: { message: err.message } });
   }
 };
+<<<<<<< HEAD
 
 exports.getTestQuery = async (req, res) => {
   const { query } = req.body;
@@ -91,3 +103,5 @@ exports.deleteTestById = async (req, res) => {
     return res.status(400).json({ error: { message: err.message } });
   }
 };
+=======
+>>>>>>> d2a46b4... Add initial routes for medicalTest api
