@@ -3,11 +3,7 @@ const router = express.Router();
 
 const MedicalTestSchemas = require("./medical-test.schemas");
 const SchemaValidator = require("../middleware/validate");
-<<<<<<< HEAD
 const MedicalTestController = require("../controllers/medical-test.controller");
-=======
-const UserController = require("../controllers/medical-test.controller");
->>>>>>> d2a46b4... Add initial routes for medicalTest api
 
 SchemaValidator.addSchemas(MedicalTestSchemas);
 
