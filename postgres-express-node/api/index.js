@@ -4,6 +4,7 @@ const router = express.Router();
 const hello = require("./routes/hello");
 //const { login } = require("./routes/login.schemas");
 const user = require("./routes/user");
+const login = require("./routes/login");
 
 const medicalTest = require("./routes/medical-test");
 
@@ -21,6 +22,7 @@ const login = require("./routes/login");
 module.exports = () => {
   hello(router);
   user(router);
+  login(router)
 
   medicalTest(router);
 
